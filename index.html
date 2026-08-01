@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DH-Shop | Accueil</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo"><i class="fa-solid fa-bag-shopping"></i> E-Shop<span>Store</span></a>
+            
+            <button class="menu-toggle" id="mobile-menu" aria-label="Menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <nav class="nav-links" id="nav-links">
+                <a href="index.html" class="active">Accueil</a>
+                <a href="produits.html">Produits</a>
+                <a href="apropos.html">À Propos</a>
+                <a href="contact.html">Contact</a>
+                
+                <button id="cartBtn" class="cart-btn">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span>Panier</span>
+                    <span id="cartCount" class="cart-badge">0</span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <span class="badge">Nouvelle Collection 2026</span>
+            <h1>Découvrez Nos Produits Exclusifs</h1>
+            <p>Profitez de nos offres exceptionnelles et de la livraison gratuite dès 50 € d'achat.</p>
+            <div class="hero-btns">
+                <a href="produits.html" class="btn btn-primary">Explorer la boutique</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Coup de Cœur du Moment</h2>
+                <div class="underline"></div>
+            </div>
+
+            <div class="products-grid">
+                <div class="product-card">
+                    <img src="C:\Users\clair\OneDrive\Desktop\mon site\images\Casque.jpeg" alt="Description de l'image" width="180">
+                    <div class="product-content">
+                        <h3>Casque Audio Sans Fil</h3>
+                        <p class="product-desc">Son haute fidélité avec réduction de bruit active.</p>
+                        <div class="product-footer">
+                            <span class="price">10 000 FCFA</span>
+                            <button class="btn btn-sm add-to-cart" data-id="1" data-name="Casque Audio Sans Fil" data-price="89.99">
+                                <i class="fa-solid fa-cart-plus"></i> Ajouter
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <img src="C:\Users\clair\OneDrive\Desktop\mon site\images\Montre connectée.jpeg" alt="Description de l'image" width="180">
+                    <div class="product-content">
+                        <h3>Montre Connectée Sport</h3>
+                        <p class="product-desc">Suivi d'activité, rythme cardiaque et étanchéité.</p>
+                        <div class="product-footer">
+                            <span class="price">8 000 FCFA</span>
+                            <button class="btn btn-sm add-to-cart" data-id="2" data-name="Montre Connectée Sport" data-price="129.00">
+                                <i class="fa-solid fa-cart-plus"></i> Ajouter
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 40px;">
+                <a href="produits.html" class="btn btn-primary">Voir tous les produits</a>
+            </div>
+        </div>
+    </section>
+
+    <div id="cartModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Votre Panier</h2>
+                <span id="closeModal" class="close">&times;</span>
+            </div>
+            <div id="cartItems" class="cart-items"></div>
+            <div class="cart-summary">
+                <h3>Total : <span id="cartTotal">0.00</span> €</h3>
+                <button id="checkoutBtn" class="btn btn-primary btn-block">Commander</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <p>&copy; 2026 E-ShopStore - Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Shop | À Propos</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo"><i class="fa-solid fa-bag-shopping"></i> E-Shop<span>Store</span></a>
+            <button class="menu-toggle" id="mobile-menu" aria-label="Menu"><i class="fa-solid fa-bars"></i></button>
+
+            <nav class="nav-links" id="nav-links">
+                <a href="index.html">Accueil</a>
+                <a href="produits.html">Produits</a>
+                <a href="apropos.html" class="active">À Propos</a>
+                <a href="contact.html">Contact</a>
+                <button id="cartBtn" class="cart-btn">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span>Panier</span>
+                    <span id="cartCount" class="cart-badge">0</span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <div class="page-header">
+        <h1>À Propos de Nous</h1>
+        <p>Découvrez notre histoire, notre vision et nos engagements envers vous.</p>
+    </div>
+
+    <section class="section">
+        <div class="container about-content">
+            <div class="about-card">
+                <i class="fa-solid fa-truck-fast icon-lg"></i>
+                <h3>Livraison Rapide</h3>
+                <p>Expédition sous 24h et livraison gratuite dès 50€ d'achat partout dans le monde.</p>
+            </div>
+            <div class="about-card">
+                <i class="fa-solid fa-shield-halved icon-lg"></i>
+                <h3>Paiement Sécurisé</h3>
+                <p>Vos transactions sont protégées par les meilleurs protocoles de cryptage SSL.</p>
+            </div>
+            <div class="about-card">
+                <i class="fa-solid fa-headset icon-lg"></i>
+                <h3>Support 24/7</h3>
+                <p>Notre équipe client est à votre disposition 7j/7 pour répondre à toutes vos questions.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal Panier -->
+    <div id="cartModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Votre Panier</h2>
+                <span id="closeModal" class="close">&times;</span>
+            </div>
+            <div id="cartItems" class="cart-items"></div>
+            <div class="cart-summary">
+                <h3>Total : <span id="cartTotal">0.00</span> €</h3>
+                <button id="checkoutBtn" class="btn btn-primary btn-block">Commander</button>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container footer-content">
+            <p>&copy; 2026 E-ShopStore - Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
