@@ -116,6 +116,34 @@
             <p>&copy; 2026 E-ShopStore - Tous droits réservés.</p>
         </div>
     </footer>
+  <!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-ShopStore</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Ton en-tête et ton contenu de page ici -->
+    <header class="navbar"> ... </header>
+    <main> ... </main>
+
+    <!-- 📍 COLLE LE CODE JAVASCRIPT EXACTEMENT ICI -->
+    <script>
+      const mobileMenu = document.getElementById('mobile-menu');
+      const navLinks = document.getElementById('nav-links');
+
+      if (mobileMenu && navLinks) {
+        mobileMenu.addEventListener('click', () => {
+          navLinks.classList.toggle('active');
+        });
+      }
+    </script>
+
+</body>
+</html>
 
     <script src="script.js"></script>
 </body>
