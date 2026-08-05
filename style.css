@@ -96,4 +96,28 @@ body { font-family: 'Segoe UI', system-ui, sans-serif; color: var(--dark); backg
     .menu-toggle { display: block; }
     .nav-links { position: absolute; top: 100%; left: 0; width: 100%; background: var(--white); flex-direction: column; padding: 20px; display: none; box-shadow: var(--shadow); }
     .nav-links.active { display: flex; }
+    .btn-whatsapp {
+  background-color: #25D366;
+  color: #ffffff;
+  border: none;
+  padding: 12px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  transition: background-color 0.3s ease;
+}
+
+.btn-whatsapp:hover {
+  background-color: #1da851;
+}
+
+.btn-whatsapp i {
+  font-size: 1.3rem;
+}
 }
