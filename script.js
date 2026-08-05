@@ -118,4 +118,48 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     updateCartUI();
+
+    function commanderSurWhatsApp() {
+  // 1. Ton numéro WhatsApp au format international (ex: 241 pour le Gabon + ton numéro)
+  const monNumeroWhatsApp = "+241 62367356"; 
+
+  // 2. Vérifier si le panier contient des articles
+  if (!cart || cart.length === 0) {
+    alert("Votre panier est vide !");
+    return;
+  }
+
+  // 3. En-tête du message
+  let message = "🛍️ *NOUVELLE COMMANDE E-SHOPSTORE*\n";
+  message += "----------------------------------------\n\n";
+  message += "*Détails de la commande :*\n";
+
+  let totalGeneral = 0;
+
+  // 4. Parcourir les articles du panier
+  cart.forEach((item, index) => {
+    const sousTotal = item.price * item.quantity;
+    totalGeneral += sousTotal;
+    
+    message += `${index + 1}. *${item.name}*\n`;
+    message += `   • Quantité : ${item.quantity}\n`;
+    message += `   • Prix unitaire : ${item.price.toLocaleString()} FCFA\n`;
+    message += `   • Sous-total : ${sousTotal.toLocaleString()} FCFA\n\n`;
+  });
+
+  // 5. Total général et instructions
+  message += "----------------------------------------\n";
+  message += `💰 *TOTAL À PAYER : ${totalGeneral.toLocaleString()} FCFA*\n`;
+  message += "----------------------------------------\n\n";
+  message += "Merci de me confirmer la disponibilité des articles et les modalités de livraison !";
+
+  // 6. Encodage du texte pour l'URL WhatsApp
+  const messageEncode = encodeURIComponent(message);
+  
+  // 7. Génération du lien d'envoi WhatsApp
+  const urlWhatsApp = `https://wa.me/${monNumeroWhatsApp}?text=${messageEncode}`;
+
+  // 8. Ouverture de WhatsApp dans un nouvel onglet
+  window.open(urlWhatsApp, '_blank');
+}
 });
